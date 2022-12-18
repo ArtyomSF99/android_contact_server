@@ -22,8 +22,9 @@ async addContact (req, res){
       
         const name = req.body.name
         const phone = req.body.phone
+        const color = req.body.color
        
-        const sql = "INSERT INTO contacts (name, phone) VALUES($1,$2)"
+        const sql = "INSERT INTO contacts (name, phone, color) VALUES($1,$2,$3)"
         await db.query(sql, [name, phone], (err, results) =>{
             if(err){
                 console.log(err)
