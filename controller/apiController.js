@@ -10,7 +10,7 @@ async getContacts (req, res){
             console.log(err)
         }
         else{
-            res.send(results.rows)
+            res.send(results.rows.reverse())
         }
        })
     }catch(e){
